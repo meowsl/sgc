@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from server.routes import example_router
+from server.routes import user_router
 from server.settings.database import init_db
 
 app = FastAPI(
@@ -23,4 +23,4 @@ app.add_middleware(
     ]
 )
 
-app.include_router(example_router)
+app.include_router(user_router)
