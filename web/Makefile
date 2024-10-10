@@ -18,6 +18,18 @@ run-frontend:
 run:
 	@make -j 2 run-backend run-frontend
 
-.PHONY: install:
+.PHONY: install
 install:
 	@make -j 2 install-backend install-frontend
+
+.PHONY: makemigration
+makemigration:
+	@poetry run task makemigration
+
+.PHONY: migrate
+migrate:
+	@poetry run task migrate
+
+.PHONY: downgrade
+downgrade:
+	@poetry run task downgrade

@@ -1,12 +1,14 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from server.routes import example_router
+from server.settings.database import init_db
 
 app = FastAPI(
     root_path="/api/v1",
     docs_url="/docs",
     openapi_url="/openapi.json"
 )
+init_db(app=app)
 
 app.add_middleware(
     CORSMiddleware,
