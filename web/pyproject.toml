@@ -7,6 +7,7 @@ readme = "README.md"
 
 [tool.taskipy.tasks]
 run-server="poetry run uvicorn server.app:app --reload"
+env="poetry run python ./server/settings/utils/environments.py"
 
 
 [tool.poetry.dependencies]
@@ -15,6 +16,9 @@ fastapi = "^0.115.0"
 tortoise = "^0.1.1"
 taskipy = "^1.13.0"
 uvicorn = "^0.31.1"
+python-dotenv = "^1.0.1"
+asyncpg = "^0.29.0"
+tortoise-orm = "^0.21.6"
 
 
 [build-system]

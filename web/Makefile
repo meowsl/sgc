@@ -1,5 +1,6 @@
 install-backend:
 	@poetry env use 3.12.0
+	@poetry run task env
 	@poetry install --no-root
 
 install-frontend:
