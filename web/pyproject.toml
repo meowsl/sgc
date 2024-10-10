@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "sgc-web"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.taskipy.tasks]
+run-server="poetry run uvicorn server.app:app --reload"
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.115.0"
+tortoise = "^0.1.1"
+taskipy = "^1.13.0"
+uvicorn = "^0.31.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
