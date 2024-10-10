@@ -64,3 +64,20 @@ Deny migrations:
 ```
 poetry run task downgrade
 ```
+### Makefile
+Create migrations:
+```
+make makemigration
+```
+Apply migrations:
+```
+make migrate
+```
+Deny migrations:
+```
+make downgrade
+```
+**General for start**
+```
+make init-database
+```
