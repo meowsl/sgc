@@ -1,1 +1,2 @@
-from .example import ExampleScheme
+from .recording import RecordingScheme
+from .signal import SignalScheme

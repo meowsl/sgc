@@ -1,1 +1,2 @@
-from .example import Example
+from .recording import Recording
+from .signal import Signal
