@@ -2,9 +2,15 @@ install-backend:
 	@poetry env use 3.12.0
 	@poetry run task env
 	@poetry install --no-root
+	@make init-database
 
 install-frontend:
 	@yarn install
+
+init-database:
+	@poetry run task aerich-init
+	@poetry run task init-db
+	@poetry run task migrate
 
 .PHONY: run-backend
 run-backend:

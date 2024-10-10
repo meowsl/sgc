@@ -8,11 +8,19 @@
 
 ## Install:
 ### Without Makefile
+Frontend:
 ```
 yarn install
 ```
+Backend:
 ```
 poetry install --no-root
+```
+Database:
+```
+poetry run task aerich-init
+poetry run task init-db
+poetry run task migrate
 ```
 ### Makefile
 ```
@@ -40,4 +48,19 @@ make run-backend
 General:
 ```
 make run
+```
+
+## Database:
+### Without Makefile
+Create migrations:
+```
+poetry run task makemigration
+```
+Apply migrations:
+```
+poetry run task migrate
+```
+Deny migrations:
+```
+poetry run task downgrade
 ```
