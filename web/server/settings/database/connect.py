@@ -19,7 +19,9 @@ if USE_SQLITE:
                 "models": ["server.models", "aerich.models"],
                 "default_connection": "default"
             }
-        }
+        },
+        "use_tz": False,
+        "timezone": "Europe/Moscow"
     }
 else:
     TORTOISE_ORM = {
@@ -31,7 +33,9 @@ else:
                 "models": ["server.models", "aerich.models"],
                 "default_connection": "default"
             }
-        }
+        },
+        "use_tz": False,
+        "timezone": "Europe/Moscow"
     }
 
 
